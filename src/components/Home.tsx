@@ -15,17 +15,17 @@ function Home() {
   return (
     <div className="flex flex-col gap-2 w-screen h-screen text-center items-center bg-slate-800 ">
      <h2 className=' text-gray-400 pt-4 w-full  text-5xl'>{idCoins}</h2>
-     <div className='flex gap-x-6 w-full pt-10  h-full items-center justify-center'>
+     <div className='flex gap-x-6 w-full pt-10  h-full items-center justify-center text-xs'>
      <button onClick={()=> setIdCoins('ethereum')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Etherum</button>
      <button onClick={()=> setIdCoins('bitcoin')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Bitcoin</button>
      <button onClick={()=> setIdCoins('solana')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Solana</button>
      <button onClick={()=> setIdCoins('dogecoin')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Dogecoin</button>
      </div>
-     <div className='flex gap-10  bg-slate-50 p-2 m-2 px-4 rounded-xl text-xs '>
-        <button onClick={(e:any)=> setChangeDat('3m')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2'>3M</button>
-        <button onClick={(e:any)=> setChangeDat('6m')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2'>6M</button>
-        <button onClick={(e:any)=> setChangeDat('1y')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2'>1y</button>
-        <button onClick={(e:any)=> setChangeDat('all')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2'>all</button>
+     <div className='flex gap-10  bg-slate-50 p-2 m-2 px-4 rounded-xl text-xs  italic '>
+        <button onClick={(e:any)=> setChangeDat('3m')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic'>3m</button>
+        <button onClick={(e:any)=> setChangeDat('6m')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic'>6m</button>
+        <button onClick={(e:any)=> setChangeDat('1y')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic'>Y</button>
+        <button onClick={(e:any)=> setChangeDat('all')} className='rounded-lg bg-slate-50 text-slate-800 p-2 italic'>All</button>
      </div>
      
   
