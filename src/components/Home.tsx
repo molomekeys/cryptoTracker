@@ -33,7 +33,7 @@ function Home() {
   <div className=' flex relative w-screen items-center justify-center  '>  
 
   <LineChart chartData={{labels:data?.chart?.map((e:any)=> moment.unix(e[0]).format('MM/DD')),
-  datasets:[{data: data?.chart?.map((e:any)=> e[1]),borderColor:'black',backgroundColor:'gray' }]}}/>
+  datasets:[{data: data?.chart?.map((e:any)=> e[1]),borderColor:'#256CCB',backgroundColor:'gray',pointStyle:false }]}}/>
  
 </div>
 <div>
