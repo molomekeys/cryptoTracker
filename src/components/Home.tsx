@@ -11,15 +11,12 @@ function Home() {
     const dataResponse= await axios.get(`https://api.coinstats.app/public/v1/charts?period=1m&coinId=${idCoins}`)
     return   dataResponse.data
   }})
-if(isLoading){
-  return <p>We are in loading...</p>
-}
-  console.log(data.chart)
+
   return (
     <div className="flex flex-col gap-10 items-center w-screen ">
      <h2 className='text-2xl text-gray-400 pt-10'>{idCoins}</h2>
      <div className='flex gap-10'>
-     <button onClick={()=> setIdCoins('ethereum')}>Put ethereum</button>
+     <button onClick={()=> setIdCoins('ethereum')}>Etherum</button>
      <button onClick={()=> setIdCoins('bitcoin')}>Bitcoin</button>
      <button onClick={()=> setIdCoins('solana')}>Solana</button>
      <button onClick={()=> setIdCoins('dogecoin')}>Dogecoin</button>
