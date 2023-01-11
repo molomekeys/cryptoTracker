@@ -30,12 +30,12 @@ function App() {
   })
   console.log(filterCoins)
   return (
-  <div className='flex flex-col gap-10 items-center'>
+  <div className='flex flex-col w-full h-full gap-2 items-center'>
   <Home/>
   <div className='w-screen flex items-center justify-center py-4'>
     <input onChange={(e:any)=> setFilterCoins(e.target.value)} value={filterCoins}
     
-    className='w-3/5 py-2 px-4 rounded-xl border-2' placeholder='look for specifique coins'/>
+    className='w-3/5 py-2 px-4 rounded-xl border-2 my-10' placeholder='look for specifique coins'/>
   </div>
   <div className='w-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 px-20'>
     {allCategoriesElement}

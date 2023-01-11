@@ -12,8 +12,8 @@ interface LineProps {
 }
 const LineChart = ({chartData}:LineProps) => {
   return (
-    <div className=''>
-      { chartData? <Line data={chartData}/> : ''}
+    <div className='w-screen h-full md:w-4/5 lg:w-4/5  flex   '>
+      { chartData? <Line data={chartData} options={{responsive:true}} /> : ''}
     </div>
   )
 }

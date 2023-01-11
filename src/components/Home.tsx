@@ -13,9 +13,9 @@ function Home() {
   }})
 
   return (
-    <div className="flex flex-col gap-10 items-center w-screen ">
-     <h2 className='text-2xl text-gray-400 pt-10'>{idCoins}</h2>
-     <div className='flex gap-10'>
+    <div className="flex flex-col gap-2 items-center w-screen h-screen text-center justify-center">
+     <h2 className='text-2xl text-gray-400 pt-10 w-full'>{idCoins}</h2>
+     <div className='flex gap-x-6 w-full h-full items-center justify-center'>
      <button onClick={()=> setIdCoins('ethereum')}>Etherum</button>
      <button onClick={()=> setIdCoins('bitcoin')}>Bitcoin</button>
      <button onClick={()=> setIdCoins('solana')}>Solana</button>
@@ -24,9 +24,9 @@ function Home() {
      
   
   
-  <div className='w-3/5 '>  
+  <div className=' h-full w-full flex items-center justify-center '>  
   <LineChart chartData={{labels:data?.chart?.map((e:any)=> moment.unix(e[0]).format('MM/DD')),
-  datasets:[{data: data?.chart?.map((e:any)=> e[1]),borderColor:'red'}]}}/>
+  datasets:[{data: data?.chart?.map((e:any)=> e[1]),borderColor:'red', }]}}/>
 </div>
 
     </div>
