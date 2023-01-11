@@ -12,7 +12,8 @@ interface LineProps {
 }
 const LineChart = ({chartData}:LineProps) => {
   return (
-    <div className='w-screen h-full md:w-4/5 lg:w-4/5  flex   '>
+    <div style={{margin:'auto'}}
+     className=' w-[470px] h-[250px]  sm:w-[800px] sm:h-[400px] md:w-[1000px] lg:w-[80%] lg:h-[520px]  flex relative   inline-block self-center items-center content-center canv   '>
       { chartData? <Line data={chartData} options={{responsive:true}} /> : ''}
     </div>
   )
