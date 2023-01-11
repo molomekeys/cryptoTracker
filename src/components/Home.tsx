@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div className="flex flex-col gap-2 w-screen h-screen text-center items-center bg-slate-800 ">
-     <h2 className=' text-gray-400 pt-4 w-full  text-5xl'>{idCoins}</h2>
+     <h2 className=' text-gray-400 pt-4 w-full  text-5xl'>{idCoins[0].toUpperCase() + idCoins.slice(1)}</h2>
      <div className='flex gap-x-6 w-full pt-10  h-full items-center justify-center text-xs'>
      <button onClick={()=> setIdCoins('ethereum')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Etherum</button>
      <button onClick={()=> setIdCoins('bitcoin')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Bitcoin</button>
