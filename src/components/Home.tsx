@@ -21,11 +21,11 @@ function Home() {
      <button onClick={()=> setIdCoins('solana')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Solana</button>
      <button onClick={()=> setIdCoins('dogecoin')} className='border-2 rounded-lg bg-slate-50 text-slate-800 p-2 text-sm'>Dogecoin</button>
      </div>
-     <div className='flex   bg-slate-50  m-2  rounded-xl text-xs  italic '>
-        <button onClick={(e:any)=> setChangeDat('3m')} className=' rounded-lg bg-slate-50 text-slate-800 italic  hover:bg-gray-200  px-4 py-3 w-full h-full'>3m</button>
-        <button onClick={(e:any)=> setChangeDat('6m')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic hover:bg-gray-200 px-4 py-3 '>6m</button>
-        <button onClick={(e:any)=> setChangeDat('1y')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic  hover:bg-gray-200 px-4 py-3 '>Y</button>
-        <button onClick={(e:any)=> setChangeDat('all')} className='rounded-lg bg-slate-50 text-slate-800 p-2 italic  hover:bg-gray-200  px-4 py-3 '>All</button>
+     <div className='flex   bg-slate-50  m-2  rounded-xl text-xs  italic  font-medium text-slate-500'>
+        <button onClick={(e:any)=> setChangeDat('3m')} className=' rounded-lg bg-slate-50 text-slate-800 italic  hover:bg-gray-200 hover:font-bold px-4 py-3 w-full h-full'>3m</button>
+        <button onClick={(e:any)=> setChangeDat('6m')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic hover:bg-gray-200 px-4 py-3 hover:font-bold'>6m</button>
+        <button onClick={(e:any)=> setChangeDat('1y')} className=' rounded-lg bg-slate-50 text-slate-800 p-2 italic  hover:bg-gray-200 px-4 py-3 hover:font-bold '>Y</button>
+        <button onClick={(e:any)=> setChangeDat('all')} className='rounded-lg bg-slate-50 text-slate-800 p-2 italic  hover:bg-gray-200  px-4 py-3 hover:font-bold'>All</button>
      </div>
      
   
