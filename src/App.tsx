@@ -32,7 +32,7 @@ function App() {
   return (
   <div className='flex flex-col w-full h-full gap-2 items-center'>
   <Home/>
-  <div className='w-screen flex items-center justify-center py-4'>
+  <div className='w-screen flex items-center justify-center py-4 lg:mt-10'>
     <input onChange={(e:any)=> setFilterCoins(e.target.value)} value={filterCoins}
     
     className='w-3/5 py-2 px-4 rounded-xl border-2 my-10' placeholder='look for specifique coins'/>
