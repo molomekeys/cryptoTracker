@@ -5,10 +5,10 @@ import LineChart from './LineChart'
 import moment from 'moment'
 function Home() {
   const [idCoins, setIdCoins] = useState('bitcoin')
+  const [changeDat,setChangeDat]=useState('1m')
 
-
-  const {data,isLoading}=useQuery({queryKey:['test',idCoins],queryFn:async ()=>{
-    const dataResponse= await axios.get(`https://api.coinstats.app/public/v1/charts?period=1m&coinId=${idCoins}`)
+  const {data,isLoading}=useQuery({queryKey:['test',idCoins,changeDat],queryFn:async ()=>{
+    const dataResponse= await axios.get(`https://api.coinstats.app/public/v1/charts?period=${changeDat}&coinId=${idCoins}`)
     return   dataResponse.data
   }})
 
@@ -21,13 +21,19 @@ function Home() {
      <button onClick={()=> setIdCoins('solana')}>Solana</button>
      <button onClick={()=> setIdCoins('dogecoin')}>Dogecoin</button>
      </div>
+     <div className='flex gap-10 text-lg'>
+        <button onClick={(e:any)=> setChangeDat('3m')}>3M</button>
+        <button onClick={(e:any)=> setChangeDat('6m')}>6M</button>
+        <button onClick={(e:any)=> setChangeDat('1y')}>1y</button>
+        <button onClick={(e:any)=> setChangeDat('all')}>all</button>
+     </div>
      
   
   <div className='flex w-screen h-screen items-center justify-center p-20'>
   <div className=' flex relative w-screen items-center justify-center  '>  
 
   <LineChart chartData={{labels:data?.chart?.map((e:any)=> moment.unix(e[0]).format('MM/DD')),
-  datasets:[{data: data?.chart?.map((e:any)=> e[1]),borderColor:'red', }]}}/>
+  datasets:[{data: data?.chart?.map((e:any)=> e[1]),borderColor:'black',backgroundColor:'gray' }]}}/>
  
 </div>
 <div>
