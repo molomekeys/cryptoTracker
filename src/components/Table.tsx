@@ -8,7 +8,10 @@ interface Props {
 }
 import {useTable} from 'react-table'
 import {useMemo} from 'react'
-const ColumnsTable=[{Header:'Id',accessor:'id'},{Header:'name',accessor:'name'},{Header:'price',accessor:'price'}]
+const ColumnsTable=[{Header:'Name',accessor:'id'},
+{Header:'price',accessor:'price'},
+{Header:'icon',accessor:'icon',Cell:({value})=> (<div><img src={value}/> </div>) ,maxWidth:10},
+]
 
 const Table = (props:any) => {
   const dataTable=useMemo(()=> props.dataForTable,[])
