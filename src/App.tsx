@@ -44,7 +44,7 @@ function App() {
   <div className='w-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 px-20'>
     {allCategoriesElement}
   </div>
-  <div className='w-full h-full text-left p-2 bg-slate-700'>
+  <div className='w-full h-full text-left p-2 bg-slate-700 hidden lg:block'>
     <Table dataForTable={data}/>
   </div>
     </div>
